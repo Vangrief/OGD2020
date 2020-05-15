@@ -1,0 +1,249 @@
+/*
+    Created on : 11.05.20
+    Author     : me
+    TG_Lernende_Mittelschulen.csv
+*/
+
+body {
+    background-color: rgb(243, 243, 243);
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: auto 4fr auto;
+    grid-template-areas: 
+    "header header header"
+    "platzhalterRechts main platzhalterLinks"
+    "footer footer footer";  
+}
+
+header {
+    grid-area: header;
+    background-color: #41ad49;
+    text-align: center;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "wappen headerText platzhalterHeaderRechts";
+}
+#wappen {
+    grid-area: wappen;
+    position: absolute;
+}
+#headerText {
+    grid-area: headerText;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+#platzhalterHeaderRechts {
+    grid-area: platzhalterHeaderRechts;
+}
+#platzhalterRechts {
+    grid-area: platzhalterRechts;
+}
+
+#platzhalterLinks {
+    grid-area: platzhalterLinks;
+}
+
+main {
+    grid-area: main;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: auto auto auto auto; 
+    grid-template-areas:
+    "NavButtonLinks NavButtonLinks NavButtonRechts NavButtonRechts"
+    "filters filters filters filters"
+    "diagramme diagramme diagramme diagramme"
+    "myTable2 myTable2 myTable2 myTable2";
+}
+.diagramme {
+    grid-area: diagramme;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto; 
+    grid-template-areas:
+    "myChartPie1 myChartPie2 myChartPie3 myChartPie4"
+    "myChartBar1 myChartBar1 myChartBar1 myChartBar1"
+    "myChartBar2 myChartBar2 myChartBar2 myChartBar2"
+    "myChartBar3 myChartBar3 myChartBar3 myChartBar3"
+    "myChartBar4 myChartBar4 myChartBar4 myChartBar4"
+    "myChartLine1 myChartLine1 myChartLine1 myChartLine1";
+}
+
+footer {
+    grid-area: footer;
+    background-color: #4ab1eb;
+    min-height: 20px;
+}
+
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 3px;
+    border-color: black;
+  }
+  .NavButtons {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    height: 40px;
+  }
+#NavButtonLinks {
+    grid-area: NavButtonLinks;
+    background-color: #888888; 
+    max-width: 4fr;   
+}
+#NavButtonRechts {
+    grid-area: NavButtonRechts;
+    background-color: green;
+    max-width: 4fr;
+}
+#myChartPie1 {
+    grid-area: myChartPie1;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#myChartPie2 {
+    grid-area: myChartPie2;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#myChartPie3 {
+    grid-area: myChartPie3;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#myChartPie4 {
+    grid-area: myChartPie4;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#myChartBar1 {
+    grid-area: myChartBar1;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#myChartBar2 {
+    grid-area: myChartBar2;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#myChartBar3 {
+    grid-area: myChartBar3;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#myChartBar4 {
+    grid-area: myChartBar4;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#myChartLine1 {
+    grid-area: myChartLine1;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.filters {
+    grid-area: filters;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;  
+    grid-template-areas: 
+    "ms1 ms2 ms3 ms4";  
+    margin-top: 10px;
+}
+#ms1 {
+    grid-area: ms1;
+}
+#ms2 {
+    grid-area: ms2;
+}
+#ms3 {
+    grid-area: ms3;
+}
+#ms4 {
+    grid-area: ms4;
+}
+
+  .multiselect {
+      width: 150px; 
+      margin-left: auto;
+      margin-right: auto;    
+      margin-top: auto;
+      margin-bottom: auto;  
+      cursor:pointer
+  }
+
+  .selectBox {
+      position: relative;
+  }
+  .selectBox:hover {
+      background-color: black;
+  }
+  .selectBox select {
+      width: 100%;
+      font-weight: bold;
+  }
+  .overSelect {
+      position: absolute;
+      left: 0; right: 0; top: 0; bottom: 0;
+  }
+  .checkboxesClass {
+      position: absolute;
+      display: none;
+      border: 1px #dadada solid;
+      height: 30px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;      
+  }
+  .checkboxesClass label {
+      display: block;
+  }
+  .checkboxesClass label:hover {
+      background-color: #1e8fff;
+  }
+  .label23 {
+      margin-bottom: 0px;
+      padding-left: 3px;
+      padding-right: 3px;
+      background-color: white;
+  }
+
+  .gridTable {
+      grid-area: myTable2;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      border-top: 1px solid black;
+      border-right: 1px solid black;
+  }
+  .gridTable > span {
+      padding: 8px 4px;
+      border-left: 1px solid black;
+      border-bottom: 1px solid black;
+  }

@@ -53,25 +53,17 @@ main {
     background-color: white;
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
-    grid-template-rows: auto auto auto auto; 
+    grid-template-rows: auto auto auto auto auto auto auto auto auto; 
     grid-template-areas:
     "NavButtonLinks NavButtonLinks NavButtonRechts NavButtonRechts"
     "filters filters filters filters"
-    "diagramme diagramme diagramme diagramme"
-    "myTable2 myTable2 myTable2 myTable2";
-}
-.diagramme {
-    grid-area: diagramme;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto auto; 
-    grid-template-areas:
     "myChartPie1 myChartPie2 myChartPie3 myChartPie4"
     "myChartBar1 myChartBar1 myChartBar1 myChartBar1"
     "myChartBar2 myChartBar2 myChartBar2 myChartBar2"
     "myChartBar3 myChartBar3 myChartBar3 myChartBar3"
     "myChartBar4 myChartBar4 myChartBar4 myChartBar4"
-    "myChartLine1 myChartLine1 myChartLine1 myChartLine1";
+    "myChartLine1 myChartLine1 myChartLine1 myChartLine1"
+    "myTable2 myTable2 myTable2 myTable2";
 }
 
 footer {

@@ -346,6 +346,8 @@ function filterData() {
     var NationalitaetLabels = [];
     var NationalitaetData = [];
     getLabelsData2(filteredNationalitaet, NationalitaetLabels, 5, filteredDaten, NationalitaetData);
+    console.log(NationalitaetLabels);
+    console.log(NationalitaetData);
     if (checkedSchuljahr != 0) {
         addData(ChartPieSchuljahr, SchuljahrLabels, SchuljahrData);
         addData(ChartPieSchulTyp, SchulTypLabels, SchulTypData);
@@ -397,7 +399,9 @@ function getLabelsData2(filteredData, Labels, zeile, filteredDaten, Data) {
                 }
             }
         }
-        Data.push(SchulAnzahlSuS);
+        if (SchulAnzahlSuS != 0) {
+            Data.push(SchulAnzahlSuS);
+        }        
     }
 }
 // Dia darstellen
@@ -419,7 +423,6 @@ var ChartBackgroundColor = [
 ]
 var tempcolorArray = Array.from({ length: 100 }, () => getRandomColor());
 ChartBackgroundColor = ChartBackgroundColor.concat(tempcolorArray);
-console.log(ChartBackgroundColor);
 var tempData = [25, 23, 24, 25];
 var templabels = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
 var tempBackgroundColor = [
@@ -543,11 +546,19 @@ function getRandomColor() {
 document.getElementById('gridTable').style.display = 'none';
 function NavButtonDia() {
     document.getElementById('gridTable').style.display = 'none';
+    document.getElementById('ms1').style.display = 'block';
+    document.getElementById('ms2').style.display = 'block';
+    document.getElementById('ms3').style.display = 'block';
+    document.getElementById('ms4').style.display = 'block';
     enableCharts();
 }
 function NavButtonTabelle() {
     disableCharts();
     document.getElementById('gridTable').style.display = 'grid';
+    document.getElementById('ms1').style.display = 'none';
+    document.getElementById('ms2').style.display = 'none';
+    document.getElementById('ms3').style.display = 'none';
+    document.getElementById('ms4').style.display = 'none';
 }
 disableCharts();
 enableCharts();

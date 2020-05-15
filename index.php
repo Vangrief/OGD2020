@@ -191,19 +191,19 @@
         </form>
         <button type="button" id="NavButtonLinks" class="NavButtons" onclick="NavButtonDia()">Diagramme</button>
         <button type="button" id="NavButtonRechts" class="NavButtons" onclick="NavButtonTabelle()">Tabelle</button>
-        <div id="diagrammeId" class="diagramme">
-            <canvas class="myChart2" id="myChartPie1"></canvas>
-            <canvas class="myChart2" id="myChartPie2"></canvas>
-            <canvas class="myChart2" id="myChartPie3"></canvas>
-            <canvas class="myChart2" id="myChartPie4"></canvas>
 
-            <canvas class="myChart2" id="myChartBar1"></canvas>
-            <canvas class="myChart2" id="myChartBar2"></canvas>
-            <canvas class="myChart2" id="myChartBar3"></canvas>
-            <canvas class="myChart2" id="myChartBar4"></canvas>
+        <canvas class="myChart2" id="myChartPie1"></canvas>
+        <canvas class="myChart2" id="myChartPie2"></canvas>
+        <canvas class="myChart2" id="myChartPie3"></canvas>
+        <canvas class="myChart2" id="myChartPie4"></canvas>
 
-            <canvas class="myChart2" id="myChartLine1"></canvas>
-        </div>
+        <canvas class="myChart2" id="myChartBar1"></canvas>
+        <canvas class="myChart2" id="myChartBar2"></canvas>
+        <canvas class="myChart2" id="myChartBar3"></canvas>
+        <canvas class="myChart2" id="myChartBar4"></canvas>
+
+        <canvas class="myChart2" id="myChartLine1"></canvas>
+
         <div class="gridTable" id="gridTable"></div>
     </main>
     <div id="platzhalterLinks"></div>
